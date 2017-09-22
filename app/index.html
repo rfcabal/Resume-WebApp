@@ -1,0 +1,349 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Resume | Ricardo Flores Cabal</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/MDBootstrap/css/mdb.min.css" />
+    <link rel="stylesheet" href="bower_components/devicon/devicon.min.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+  </head>
+  <body ng-app="resumeApp">
+    <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+
+    <!-- This is header -->
+    <div class="header">
+      <div class="container">
+        <div class="row">
+          <h2>Ricardo Flores Cabal</h2>
+          <h3>{{ "JOBTITLE" | translate }}</h3>
+        </div>
+        <div class="row">
+          <div class="col-md-9" style="padding-left: 0px;">
+            <div class="btn-group" role="group" aria-label="...">
+              <a class="btn btn-primary btn-sm page-scroll" href="#resume">{{ "ABOUT" | translate }}</a>
+              <a class="btn btn-primary btn-sm page-scroll" href="#skills">{{ "SKILLS" | translate }}</a>
+              <a class="btn btn-primary btn-sm page-scroll" href="#experience">{{ "EXPERIENCE" | translate }}</a>
+              <a class="btn btn-primary btn-sm page-scroll" href="#education">{{ "EDUCATION" | translate }}</a>
+            </div>
+          </div>
+          <div class="col-md-3">  
+          
+            <!--<div class="btn-group pull-right" ng-controller="LangCtrl">
+              <div class="btn btn-primary btn-sm" ng-click="switchLanguage('es')">Español</div>
+              <div class="btn btn-primary btn-sm" ng-click="switchLanguage('en')">English</div>
+            </div>-->
+          
+          <div class="btn-group pull-right" ng-controller="LangCtrl">
+              <a class="btn btn-primary btn-sm" href="https://www.dropbox.com/s/24yvqlwrkm519mf/RicardoFloresCV.docx?dl=0">CV Word</a>
+              <a class="btn btn-primary btn-sm" href="https://www.dropbox.com/s/yb31tbl2zjtd285/RicardoFloresCV.pdf?dl=0">CV PDF</a>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- This is main content -->
+
+    <div class="container">
+      <div class="row">
+        
+        <!-- SideBar -->
+
+        <div class="col-md-3" style="padding-left: 0px;">
+          <div class="sidebar z-depth-1">
+            <img class="img-responsive" src="images/Profile.jpg">
+            <div class="nav-icon" ng-controller="SidemenuCtrl">
+                
+                <!-- Button Menu -->
+                
+                <button class="btn btn-primary" style="padding: 10px 15px; margin: 0px;" ng-click="showmenu = !showmenu"><div class="glyphicon glyphicon-menu-hamburger"></div></button>
+            
+                <!-- Lateral Menu -->
+                
+                <div>
+                  <div id="sidemenu" ng-show="showmenu" class="sidemenu animated">
+                    <div style="padding: 10px 15px;">
+                      <h3>{{ "TITLEMENU" | translate }}</h3>
+                    </div>
+                    <ul class="nav">
+                      <li class="active">
+                        <a href="#" ng-click="showmenu = !showmenu">
+                        <i class="glyphicon glyphicon-home"></i>
+                        {{ "RESUME" | translate }}</a>
+                      </li>
+                      <li>
+                        <a href="#!/projects" ng-click="showmenu = !showmenu">
+                        <i class="glyphicon glyphicon-blackboard"></i>
+                        {{ "PROJECTS" | translate }}</a>
+                      </li>
+                      <li>
+                        <a href="#!/coverletter" ng-click="showmenu = !showmenu">
+                        <i class="glyphicon glyphicon-pencil"></i>
+                        {{ "COVERLETTER" | translate }}</a>
+                      </li>
+                      <li>
+                        <a href="#!/contact" ng-click="showmenu = !showmenu">
+                        <i class="glyphicon glyphicon-phone-alt"></i>
+                        {{ "CONTACT" | translate }}</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div id="overlay" ng-show="showmenu" class="overlay animated" ng-click="showmenu = !showmenu"></div>
+                </div>
+               
+            </div>
+
+            <!-- Personal Info -->
+            
+            <div class="titlesidebar">
+               {{ "PERSONALINFO" | translate }}
+            </div>
+            <div class="textsidebar">
+              <strong>{{ "PHONE" | translate }}</strong>
+              <p>+56 9 9232 5744</p>
+              <strong>E-mail</strong>
+              <p><a href="mailto:ricardo@zreactor.cl" title="">ricardo@zreactor.cl</a></p>
+              <strong>WWW</strong>
+              <p><a href="http://www.zreactor.cl" title="">ZReactor Labs</a></p>
+              <strong>{{ "SOCIAL" | translate }}</strong>
+              <p style="margin-top: 5px;">
+              <a href="http://www.linkedin.com/in/rfcabal/"><img src="images/icons/1487723622_5296_-_LinkedIn.png" width="32" alt=""></a>
+              <a href="http://github.com/rfcabal"><img src="images/icons/1487723690_5347_-_Github.png" width="32" alt=""></a>
+              <a href="http://stackoverflow.com/users/3303432/rfcabal"><img src="images/icons/1487723662_5333_-_Stackoverflow.png" width="32" alt=""></a>
+              <a href="skype:rfcabal?call"><img id="skype" src="images/icons/1487723620_5306_-_Skype.png" width="32" alt=""></a>
+              <a href="http://www.instagram.com/zreactor/"><img src="images/icons/1487723637_5301_-_Instagram.png" width="32" alt=""></a>
+              </p>           
+            </div>
+
+            <!-- LANGUAGES -->
+
+            <div class="titlesidebar">
+              {{ "LANGUAGES" | translate }}
+            </div>
+            <div class="textsidebar">
+              <strong>{{ "SPANISH" | translate }}</strong>
+              <div class="progress" style="margin-bottom: 5px;">
+                <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                  <span class="sr-only">100% Complete</span>
+                </div>
+              </div>
+              <p class="text-right" style="padding-right: 3px;">{{ "NATIVE" | translate }}</p>
+              <strong>{{ "ENGLISH" | translate }}</strong>
+              <div class="progress" style="margin-bottom: 5px;">
+                <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 75%">
+                  <span class="sr-only">75% Complete</span>
+                </div>
+              </div>
+              <p class="text-right" style="padding-right: 3px;">{{ "ADVANCED" | translate }}</p>
+              <strong>Bahasa Indonesia</strong>
+              <div class="progress" style="margin-bottom: 5px;">
+                <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 15%">
+                  <span class="sr-only">15% Complete</span>
+                </div>
+              </div>
+              <p class="text-right" style="padding-right: 3px;">{{ "BASIC" | translate }}</p>
+            </div>
+
+            <!-- PERSONAL SKILLS -->
+
+             <div class="titlesidebar">
+               {{ "PSKILLS" | translate }}
+            </div>
+            <div class="textsidebar">
+              <ul>
+                <li class="listsidemenu">{{ "TEAMWORK" | translate }}</li>
+                <li class="listsidemenu">{{ "LEADERSHIP" | translate }}</li>
+                <li class="listsidemenu">{{ "INNOVATION" | translate }}</li>
+                <li class="listsidemenu">{{ "INITIATIVE" | translate }}</li>
+              </ul>
+            </div>
+
+            <!-- TECHNICAL SKILLS -->
+
+            <div class="titlesidebar">
+              {{ "TSKILLS" | translate }}
+            </div>
+            <div class="textsidebar">
+              <strong>Moodle</strong>
+              <div class="progress" style="margin-bottom: 5px;">
+                <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
+                  <span class="sr-only">90% Complete</span>
+                </div>
+              </div>
+              <p class="text-right" style="padding-right: 3px;">{{ "ADVANCED" | translate }}</p>
+              <strong>Wordpress</strong>
+              <div class="progress" style="margin-bottom: 5px;">
+                <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 85%">
+                  <span class="sr-only">85% Complete</span>
+                </div>
+              </div>
+              <p class="text-right" style="padding-right: 3px;">{{ "ADVANCED" | translate }}</p>
+              <strong>Office</strong>
+              <div class="progress" style="margin-bottom: 5px;">
+                <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 85%">
+                  <span class="sr-only">85% Complete</span>
+                </div>
+              </div>
+              <p class="text-right" style="padding-right: 3px;">{{ "ADVANCED" | translate }}</p>
+              <strong>PHP</strong>
+              <div class="progress" style="margin-bottom: 5px;">
+                <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                  <span class="sr-only">60% Complete</span>
+                </div>
+              </div>
+              <p class="text-right" style="padding-right: 3px;">{{ "INTERMEDIATE" | translate }}</p>
+              <strong>Bootstrap</strong>
+              <div class="progress" style="margin-bottom: 5px;">
+                <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                  <span class="sr-only">60% Complete</span>
+                </div>
+              </div>
+              <p class="text-right" style="padding-right: 3px;">{{ "INTERMEDIATE" | translate }}</p>
+              <strong>Phonegap</strong>
+              <div class="progress" style="margin-bottom: 5px;">
+                <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 55%">
+                  <span class="sr-only">55% Complete</span>
+                </div>
+              </div>
+              <p class="text-right" style="padding-right: 3px;">{{ "INTERMEDIATE" | translate }}</p>
+              <strong>HTML5</strong>
+              <div class="progress" style="margin-bottom: 5px;">
+                <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+                  <span class="sr-only">50% Complete</span>
+                </div>
+              </div>
+              <p class="text-right" style="padding-right: 3px;">{{ "INTERMEDIATE" | translate }}</p>
+              <strong>Ruby on Rails</strong>
+              <div class="progress" style="margin-bottom: 5px;">
+                <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+                  <span class="sr-only">50% Complete</span>
+                </div>
+              </div>
+              <p class="text-right" style="padding-right: 3px;">{{ "INTERMEDIATE" | translate }}</p>
+              <strong>OpenMRS</strong>
+              <div class="progress" style="margin-bottom: 5px;">
+                <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+                  <span class="sr-only">50% Complete</span>
+                </div>
+              </div>
+              <p class="text-right" style="padding-right: 3px;">{{ "INTERMEDIATE" | translate }}</p>
+              <strong>C++</strong>
+              <div class="progress" style="margin-bottom: 5px;">
+                <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                  <span class="sr-only">40% Complete</span>
+                </div>
+              </div>
+              <p class="text-right" style="padding-right: 3px;">{{ "BASIC" | translate }}</p>
+              <strong>Odoo</strong>
+              <div class="progress" style="margin-bottom: 5px;">
+                <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 30%">
+                  <span class="sr-only">30% Complete</span>
+                </div>
+              </div>
+              <p class="text-right" style="padding-right: 3px;">{{ "BASIC" | translate }}</p>              
+            </div>
+
+            <!-- COURSES -->
+            <div class="titlesidebar">
+               {{ "COURSES" | translate }}
+            </div>
+            <div class="textsidebar">
+              <ul>
+                <li class="listsidemenu">Design Factory</li>
+                <li class="listsidemenu">Linux</li>
+                <li class="listsidemenu">SQL Server</li>
+                <li class="listsidemenu">mHealth</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Main Content -->
+
+        <div class="col-md-9">
+          <div ng-view="">
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- This is Footer -->
+
+    <div class="footer">
+      <div class="container">
+        
+      </div>
+    </div>
+
+    <!-- Overlay MENU -->
+    
+
+    
+
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+     <script>
+       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+       }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-93255253-1');
+       ga('send', 'pageview');
+    </script>
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-translate/angular-translate.js"></script>
+    <script src="bower_components/MDBootstrap/js/mdb.min.js"></script>
+    <script src="bower_components/angular-svg-round-progressbar/build/roundProgress.js"></script>
+    <script src="bower_components/firebase/firebase.js"></script>
+    <script src="bower_components/angularfire/dist/angularfire.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <script src="https://apis.google.com/js/platform.js"></script>
+        <script>
+          // Initialize Firebase
+          var config = {
+            apiKey: "AIzaSyCOsEgFY68CvBQSwzK_IyWEcZ6iOgccDog",
+            authDomain: "myresume-8542c.firebaseapp.com",
+            databaseURL: "https://myresume-8542c.firebaseio.com",
+            storageBucket: "myresume-8542c.appspot.com",
+            messagingSenderId: "779105832763"
+          };
+          firebase.initializeApp(config);
+        </script>
+        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/lang.js"></script>
+        <script src="scripts/controllers/sidemenu.js"></script>
+        <!-- endbuild -->
+</body>
+</html>

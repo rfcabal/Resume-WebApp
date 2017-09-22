@@ -1,0 +1,34 @@
+{
+  "name": "resume",
+  "version": "0.0.0",
+  "dependencies": {
+    "angular": "^1.4.0",
+    "bootstrap": "^3.2.0",
+    "angular-animate": "^1.4.0",
+    "angular-cookies": "^1.4.0",
+    "angular-resource": "^1.4.0",
+    "angular-route": "^1.4.0",
+    "angular-sanitize": "^1.4.0",
+    "angular-touch": "^1.4.0",
+    "angular-translate": "^2.14.0",
+    "MDBootstrap": "^4.3.0",
+    "angular-svg-round-progressbar": "0.4.8",
+    "devicon": "*",
+    "angularfire": "^2.3.0"
+  },
+  "devDependencies": {
+    "angular-mocks": "^1.4.0",
+    "angular-translate": "^2.14.0"
+  },
+  "appPath": "app",
+  "moduleName": "resumeApp",
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "less/bootstrap.less",
+        "dist/css/bootstrap.css",
+        "dist/js/bootstrap.js"
+      ]
+    }
+  }
+}
